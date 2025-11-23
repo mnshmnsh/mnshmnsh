@@ -15,7 +15,7 @@ Implementation of Carney & Varcoe’s *Universal Statistical Simulator*, reprodu
 
 ### **2. Classiq AztecHacks 2024 — Quantum Hackathon**  
 🔗 **Repo:** https://github.com/mnshmnsh/Classiq-AztecHacks-2024-Quantum-Hackathon  
-Solo 48-hour sprint solving all challenge tasks using the Classiq SDK. Includes W₃ Werner-state generation, multi-qubit arithmetic, and resource-aware circuit synthesis.
+Hackathon participation solving all challenge tasks using the Classiq SDK. Includes W₃ Werner-state generation, multi-qubit arithmetic, and resource-aware circuit synthesis.
 
 ---
 
