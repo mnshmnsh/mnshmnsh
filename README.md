@@ -108,5 +108,3 @@ Python • PyTorch • NumPy • SciPy • Data visualization
 
 **LinkedIn:** https://www.linkedin.com/in/hisham-mansour-554237281  
 **GitHub:** https://github.com/mnshmnsh
-
-  
