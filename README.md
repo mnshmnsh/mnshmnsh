@@ -24,18 +24,3 @@ Solo 48-hour sprint solving all challenge tasks using the Classiq SDK. Includes 
 QAOA and Trotterized 2D Ising simulation with artificial noise injection. Ground-state energy recovered via Zero-Noise Extrapolation (ZNE), inspired by Kim et al., *Nature* (2023). Includes benchmarking and Classiq-based circuit-generation utilities.
 
 ---
-
-## 📌 Purpose of This Repository  
-This top-level repo acts as a **single pinned portfolio** for:
-
-- LinkedIn  
-- CVs and academic profiles  
-- Hackathon and application submissions  
-- Long-term consolidation of quantum projects  
-
-The detailed codebase remains unchanged inside each individual project repository.
-
----
-
-## 📫 Contact  
-For collaborations or speaking engagements, feel free to connect via LinkedIn or GitHub.
