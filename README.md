@@ -12,18 +12,32 @@ Each project is kept in its original submitted form, and this repository acts as
 Implementation of Carney & Varcoe’s [Universal Statistical Simulator](https://arxiv.org/abs/2202.01735), reproducing classical and quantum Galton-board distributions using quantum circuits.
 
 #### 🔧 Key Features
-- General algorithm for **n‑level Galton boards** (scalable circuit construction).  
-- Distributions tested: Gaussian, Exponential, Hadamard quantum walk.  
-- Noise modeling and correlated readout error mitigation (`qiskit_experiments`).  
-- Statistical validation using **Total Variation Distance (TVD)** and residual analysis.  
-- Circuit diagrams generated for n=1, 2, 5 levels.  
-- Demonstrated **O(n²)** quantum resource scaling vs classical O(2ⁿ).  
+- General algorithm for **n‑level Galton boards** (tested at n=1, 2, and 5).  
+- Distributions analyzed: Gaussian (Hadamard gates), Exponential (biased RY rotations), and Hadamard quantum walk (post‑processed symmetry).  
+- Simulations performed under four conditions: noiseless baseline, noisy unoptimized, noisy optimized, and noisy optimized with error mitigation.  
+- **Statistical validation**: compared simulated vs theoretical distributions using **Total Variation Distance (TVD)** and bin‑by‑bin residual analysis.  
+- Circuit diagrams generated for 1‑ and 2‑level boards, showing gate structure and depth.  
+- Verified qubit scaling formula \(2n+2\) and depth growth consistent with O(\(n^2\)) construction.
 
 #### 📈 Results
-- Verified Gaussian, Exponential, and Hadamard distributions against theory.  
-- Strong agreement achieved (TVD < 0.1 in optimized runs).  
-- Residual plots highlight systematic vs random errors.  
-
+- **Gaussian distributions:**  
+  - n=1: Simulated counts matched theory closely (Bin0=4150 vs 4096, Bin1=4042 vs 4096), TVD ≈ 0.013.  
+  - n=2: Simulated counts (Bin0=2070, Bin1=4069, Bin2=2053) vs theory (2048, 4096, 2048), TVD ≈ 0.015.  
+- **Exponential distributions:**  
+  - Bias parameter \(p_{\mathrm{right}} \approx 0.90\).  
+  - Noisy runs showed larger deviations, with TVD up to ~0.23–0.33 depending on optimization level.  
+- **Hadamard quantum walk (U‑shape):**  
+  - Post‑processed symmetry produced distributions with TVD < 0.01 in noiseless runs.  
+- **Circuit resources:**  
+  - n=1 circuits used 4 qubits, depth ≈ 5.  
+  - n=2 circuits used 6 qubits, depth ≈ 14.  
+  - Scaling confirmed the \(2n+2\) qubit formula and quadratic depth growth.  
+- **Noise analysis:**  
+  - FakeSherbrooke backend used to emulate hardware constraints.  
+  - Optimization reduced depth by ~20–40% in some cases, though routing sometimes increased gate counts.  
+- **Residual plots:**  
+  - Highlighted which bins contributed most to distribution differences under noise.
+    
 ---
 
 ### **2. Classiq AztecHacks 2024 — Quantum Hackathon**  
