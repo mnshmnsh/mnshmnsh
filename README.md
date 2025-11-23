@@ -30,17 +30,26 @@ Implementation of Carney & Varcoe’s [Universal Statistical Simulator](https://
 🔗 **Repo:** https://github.com/mnshmnsh/Classiq-AztecHacks-2024-Quantum-Hackathon  
 Hackathon participation solving all challenge tasks using the Classiq SDK.
 
-#### 🔧 Key Features
-- Arithmetic functions implemented directly in Classiq SDK.  
-- **W₃ Werner state**: superposition of `001`, `010`, `100` via decomposed Toffoli (CNOT sequence).  
-- Pipeline from high‑level model → synthesized circuits → resource reporting (qubits, depth, gate count).  
-- Bonus: custom weighted‑sum circuit with entanglement structure generation.  
-- Progressive difficulty: each function builds on prior concepts.  
+#### 🔧 Part A — Challenge Functions
+- Implemented all **10 progressively difficult functions** as required:
+  - `inplace_square`, `inplace_linear`, `inplace_quadratic`, `inplace_cubic`, `inplace_exponential`
+  - `discrete_log_oracle`, `inplace_discrete_logarithm`
+  - `equality_oracle`, `inplace_sum`, `sum_of_squares`
+- Each function expressed in **reversible arithmetic form** using Classiq’s symbolic quantum number types (`QNum`, `QArray[QBit]`).
+- Verified correctness of arithmetic and oracle logic.
+- Resource usage (qubits, depth, gate count) reported after synthesis using Classiq’s reporting utilities.
+
+#### 🔧 Part B — Bonus Algorithm
+- Implemented the **W₃ Werner state**:
+  - Superposition of `001`, `010`, `100`.
+  - Constructed via a sequence of RY, X, CH, and CX gates.
+  - Demonstrates entanglement structure generation and state preparation.
+- Synthesized and executed with Classiq, confirming correct distribution of measurement outcomes.
 
 #### 📈 Results
-- Verified correctness of all 10 functions.  
-- Resource usage reported for each synthesized circuit.  
-- Bonus algorithm implemented with entanglement‑based arithmetic.  
+- All 10 challenge functions implemented and tested successfully.  
+- Bonus Werner state prepared and validated.  
+- Resource reporting provided for synthesized circuits, highlighting qubit usage and gate counts.
 
 ---
 
