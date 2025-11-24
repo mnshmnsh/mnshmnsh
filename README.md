@@ -72,14 +72,14 @@ Hackathon participation solving all challenge tasks using the Classiq SDK.
 
 ### **3. Quantum Utility & Error Mitigation — 2D Ising Model**  
 🔗 **Repo:** https://github.com/mnshmnsh/Development-of-Novel-Quantum-Algorithms  
-QAOA and Trotterized 2D Ising simulation with artificial noise injection, guided by [Kim et al., Nature 615, 596–600 (2023)](https://doi.org/10.1038/s41586-023-06096-3).
+**QAOA applied to the 2D transverse‑field Ising model** with trotterization and artificial noise injection, guided by [Kim et al., Nature 615, 596–600 (2023)](https://doi.org/10.1038/s41586-023-06096-3).
 
 #### 🔧 Key Features
 - 2D Ising Hamiltonian (4×4 lattice, periodic boundary conditions) encoded with Pyomo.  
-- QAOA with 5 layers, 100 iterations, CVaR parameter \(\alpha=0.7\).  
+- **QAOA (Quantum Approximate Optimization Algorithm)** used as the hybrid quantum‑classical solver.  
 - Suzuki–Trotter decomposition for Hamiltonian evolution.  
 - Circuit synthesized under depth and width constraints.  
-- Random noise added to Pauli coefficients; Zero‑Noise Extrapolation (ZNE) applied via linear fit.
+- Random noise added to Pauli coefficients; **Zero‑Noise Extrapolation (ZNE)** applied via linear fit.
 
 #### 📈 Results
 - Circuit width = 16 qubits, depth ≈ 91.  
@@ -94,17 +94,15 @@ QAOA and Trotterized 2D Ising simulation with artificial noise injection, guided
 ## 🧠 Skills & Tools
 
 ### **Quantum**
-Qiskit • Classiq SDK • Pennylane • D‑Wave Ocean SDK  
-Tensor Networks • QAOA • VQE • Amplitude encoding  
-Variational circuits • Quantum walks • Quantum simulation  
-ZNE • PDE solvers  
+- **Qiskit** — Galton Board circuits, Aer simulation, error mitigation (`qiskit_experiments`)  
+- **Classiq SDK** — AztecHacks challenge functions, 2D Ising QAOA implementation  
+- **QAOA** — Applied in the Ising project (5‑layer optimization)  
+- **Variational circuits** — Evident in QAOA layers  
+- **Quantum walks** — Hadamard quantum walk distribution in the Galton Board project  
+- **Quantum simulation** — AerSimulator (Galton Board), Classiq simulator (Ising)  
+- **ZNE (Zero‑Noise Extrapolation)** — Implemented in the Ising project for noise mitigation  
 
 ### **Classical / ML**
-Python • PyTorch • NumPy • SciPy • Data visualization  
-
----
-
-## 📫 Contact
-
-**LinkedIn:** https://www.linkedin.com/in/hisham-mansour-554237281  
-**GitHub:** https://github.com/mnshmnsh
+- **Python** — Core language across all projects  
+- **NumPy** — Binomial pmf (Galton Board), polynomial fitting for ZNE (Ising)  
+- **Data visualization** — Matplotlib plots, residuals, convergence graphs, energy vs noise plots
